@@ -13,12 +13,8 @@ public class Calculator{
 			String [] numbers;
 			numbers = text.split(",");
 
-			int sum = 0;
-			for(String number : numbers)
-			{
-				sum += toInt(number);
-			}
-			return sum;
+			return sumUp(numbers);
+			
 		}
 		else return 1;
 		
@@ -27,5 +23,15 @@ public class Calculator{
 	private static int toInt(String number)
 	{
 		return Integer.parseInt(number);
+	}
+
+	private static int sumUp(String[] numbers)
+	{
+		int sum = 0;
+		for(String number : numbers)
+		{
+			sum += toInt(number);
+		}
+		return sum;
 	}
 }
