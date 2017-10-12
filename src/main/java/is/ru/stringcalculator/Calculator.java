@@ -12,7 +12,13 @@ public class Calculator{
 		{
 			String [] numbers;
 			numbers = text.split(",");
-			return (toInt(numbers[0]) + toInt(numbers[1]));
+
+			int sum = 0;
+			for(String number : numbers)
+			{
+				sum += toInt(number);
+			}
+			return sum;
 		}
 		else return 1;
 		
