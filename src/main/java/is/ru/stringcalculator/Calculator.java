@@ -10,21 +10,8 @@ public class Calculator{
 		}
 		else if(text.contains("-"))
 		{
-			String emptyString = "";
-			String[] numbers = text.split(",|\n");
-			for(String number : numbers)
-			{
-				if(number.contains("-"))
-				{
-					emptyString += number + ",";
-				}
-			}
-			if(emptyString.endsWith(","))
-			{
-				emptyString = emptyString.substring(0, emptyString.length() -1);
-			}
-			System.out.println(emptyString);
-			throw new IllegalArgumentException("err " + emptyString);
+			String negative = negativeNumbers(text);
+			throw new IllegalArgumentException("Negavives not allowed: " + negative);
 
 		}
 		else if(text.contains(",") || text.contains("\n"))
@@ -50,6 +37,25 @@ public class Calculator{
 			sum += toInt(number);
 		}
 		return sum;
+	}
+
+	private static String negativeNumbers(String text)
+	{
+		String emptyString = "";
+		String[] numbers = text.split(",|\n");
+		for(String number : numbers)
+		{
+			if(number.contains("-"))
+			{
+				emptyString += number + ",";
+			}
+		}
+		if(emptyString.endsWith(","))
+		{
+			emptyString = emptyString.substring(0, emptyString.length() -1);
+		}
+		System.out.println(emptyString);
+		return emptyString;
 	}
 
 }

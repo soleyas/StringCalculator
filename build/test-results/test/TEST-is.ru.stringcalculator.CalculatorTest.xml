@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-10-13T16:07:14" hostname="Soleys-MacBook-Pro.local" time="0.004">
+<testsuite name="is.ru.stringcalculator.CalculatorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-10-13T16:18:20" hostname="Soleys-MacBook-Pro.local" time="0.004">
   <properties/>
   <testcase name="testMultipleNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.002"/>
   <testcase name="testWithNewLineAndComma" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testWithNegative" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
   <testcase name="testEmptyString" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testTwoNumbers" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
-  <testcase name="testWithNewLine" classname="is.ru.stringcalculator.CalculatorTest" time="0.001"/>
+  <testcase name="testWithNewLine" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <testcase name="testOneNumber" classname="is.ru.stringcalculator.CalculatorTest" time="0.0"/>
   <system-out><![CDATA[-2, -1
 ]]></system-out>
