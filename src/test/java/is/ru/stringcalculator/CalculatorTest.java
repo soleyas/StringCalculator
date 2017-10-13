@@ -16,6 +16,12 @@ public class CalculatorTest{
 	{
 		assertEquals(1, Calculator.add("1"));
 	}
+
+	@Test
+	public void testOneHugeNumber()
+	{
+		assertEquals(0, Calculator.add("2003"));
+	}
 	
 	@Test
 	public void testTwoNumbers()

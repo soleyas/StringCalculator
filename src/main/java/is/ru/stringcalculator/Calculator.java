@@ -12,7 +12,6 @@ public class Calculator{
 		{
 			String negative = negativeNumbers(text);
 			throw new IllegalArgumentException("Negavives not allowed: " + negative);
-
 		}
 		else if(text.contains(",") || text.contains("\n"))
 		{
@@ -26,7 +25,12 @@ public class Calculator{
 
 	private static int toInt(String number)
 	{
-		return Integer.parseInt(number);
+		int num = Integer.parseInt(number);
+		if(num > 1000)
+		{
+			return 0;
+		}
+		return num;
 	}
 
 	private static int sumUp(String[] numbers)
@@ -34,10 +38,6 @@ public class Calculator{
 		int sum = 0;
 		for(String number : numbers)
 		{
-			if(toInt(number) > 1000)
-			{
-				number = "0";
-			}
 			sum += toInt(number);
 		}
 		return sum;
@@ -61,5 +61,4 @@ public class Calculator{
 		System.out.println(emptyString);
 		return emptyString;
 	}
-
 }
