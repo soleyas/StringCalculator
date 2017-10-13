@@ -16,11 +16,29 @@ public class CalculatorTest{
 	{
 		assertEquals(1, Calculator.add("1"));
 	}
-
+	
 	@Test
 	public void testTwoNumbers()
 	{
 		assertEquals(6, Calculator.add("2,4"));
+	}
+
+	@Test
+	public void testMultipleNumbers()
+	{
+		assertEquals(9, Calculator.add("1,3,5"));
+	}
+	
+	@Test
+	public void testWithNewLineAndComma()
+	{
+		assertEquals(5, Calculator.add("1\n3,1"));
+	}
+
+	@Test
+	public void testWithNewLine()
+	{
+		assertEquals(14, Calculator.add("11\n3"));
 	}
 
 	

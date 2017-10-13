@@ -8,15 +8,12 @@ public class Calculator{
 		{
 			return 0;
 		}
-		else if(text.contains(","))
+		else if(text.contains(",") || text.contains("\n"))
 		{
-			String [] numbers;
-			numbers = text.split(",");
-
+			String[] numbers = text.split(",|\n");
 			return sumUp(numbers);
-			
 		}
-		else return 1;
+		else return toInt(text);	
 		
 	}
 
