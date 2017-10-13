@@ -1,5 +1,5 @@
 package is.ru.stringcalculator;
-
+import static java.lang.System.out;
 public class Calculator{
 	
 	public static int add(String text)
@@ -8,11 +8,31 @@ public class Calculator{
 		{
 			return 0;
 		}
+		else if(text.contains("-"))
+		{
+			String emptyString = "";
+			String[] numbers = text.split(",|\n");
+			for(String number : numbers)
+			{
+				if(number.contains("-"))
+				{
+					emptyString += number + ",";
+				}
+			}
+			if(emptyString.endsWith(","))
+			{
+				emptyString = emptyString.substring(0, emptyString.length() -1);
+			}
+			System.out.println(emptyString);
+			throw new IllegalArgumentException("err " + emptyString);
+
+		}
 		else if(text.contains(",") || text.contains("\n"))
 		{
 			String[] numbers = text.split(",|\n");
 			return sumUp(numbers);
 		}
+		
 		else return toInt(text);	
 		
 	}
@@ -31,4 +51,5 @@ public class Calculator{
 		}
 		return sum;
 	}
+
 }

@@ -40,6 +40,11 @@ public class CalculatorTest{
 	{
 		assertEquals(14, Calculator.add("11\n3"));
 	}
-
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testWithNegative()
+	{
+		Calculator.add("-2, 2, -1");
+	}
 	
 }
