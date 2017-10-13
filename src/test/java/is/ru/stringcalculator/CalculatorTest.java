@@ -46,5 +46,10 @@ public class CalculatorTest{
 	{
 		Calculator.add("-2, 2, -1");
 	}
-	
+
+	@Test
+	public void testWithBigNumber()
+	{
+		assertEquals(113, Calculator.add("11,3,1004,99"));
+	}
 }

@@ -34,6 +34,10 @@ public class Calculator{
 		int sum = 0;
 		for(String number : numbers)
 		{
+			if(toInt(number) > 1000)
+			{
+				number = "0";
+			}
 			sum += toInt(number);
 		}
 		return sum;
