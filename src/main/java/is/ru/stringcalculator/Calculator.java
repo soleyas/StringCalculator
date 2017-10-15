@@ -18,7 +18,15 @@ public class Calculator{
 			String[] numbers = text.split(",|\n");
 			return sumUp(numbers);
 		}
-		
+		/*
+		else if(text.startsWith("\\"))
+		{
+			String[] numbers = text.substring(2).split("\n,2");
+			String one = numbers[0];
+			String two = numbers[1];
+			String[] final = two.split(one);
+			return sumUp(final);
+		}*/
 		else return toInt(text);	
 		
 	}
